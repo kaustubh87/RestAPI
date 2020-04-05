@@ -1,8 +1,8 @@
 <html>  
   <head>
     <meta charset="utf-8">
-    <title>Welcome to Our API</title>
-     <style>
+    <title>Login</title>
+    <style>
             body{
                 font-family: arial;
                 margin: 0;
@@ -35,14 +35,28 @@
                 padding: 0 10px;
                 color: #333;
             }
+            .google-btn{
+                color: #fff;
+                text-decoration: none;
+                font-size: 18px;
+                padding: 10px;
+                background: #ff5353;
+            }
         </style>
   </head>
   <body>
-    <nav class="nav justify-content-center">
-       <li><a href="/auth/login">Login</a></li>
+    <nav>
+      <ul>
+        <li><a href="/auth/login">Login</a></li>
         <li><a href="/auth/logout">Logout</a></li>
         <li><a href="/">Homepage</a></li>
+      </ul>
     </nav>
-  
+  <header>
+    <h1>Login using...</h1>
+  </header>
+  <main>
+    <a class="google-btn" href="auth/google">Google</a>
+  </main>
   </body>
 </html>
