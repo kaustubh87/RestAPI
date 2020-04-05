@@ -7,7 +7,9 @@
     "ejs": "^3.0.1",
     "express": "^4.0.0",
     "mongoose": "~3.6.13",
-    "nodemon": "^2.0.2"
+    "nodemon": "^2.0.2",
+    "passport": "^0.4.1",
+    "passport-google-oauth20": "^2.0.0"
   },
   "scripts": {
     "start": "node index.js"
