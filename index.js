@@ -8,7 +8,7 @@ app.use(bodyParser.json());
 
 app.set('view engine', 'ejs');
 
-var port = process.env.PORT || 8080;
+var port = process.env.PORT || 3000;
 
 app.use('/auth', authRoutes);
 
