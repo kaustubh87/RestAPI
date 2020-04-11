@@ -1,6 +1,7 @@
 var express = require('express');
 const authRoutes = require('./routes/auth-routes.js');
-var app = express();
+const passportSetup = require('./config/passport-setup');
+const app = express();
 
 var bodyParser = require('body-parser');
 app.use(bodyParser.urlencoded({extended: true}));
@@ -17,9 +18,9 @@ app.get('/', function (req, res) {
   //res.send('Inside Get ');
 });
 
-app.post('/login', function (req, res) {
-  res.send('Inside Post');
-});
+// app.post('/login', function (req, res) {
+//   res.send('Inside Post');
+// });
 
 
 
