@@ -1,17 +1,31 @@
 {
-  "name": "node-api",
-  "main": "server.js",
-  "dependencies": {
-    "body-parser": "~1.0.1",
-    "bootstrap": "^4.4.1",
-    "ejs": "^3.0.1",
-    "express": "^4.0.0",
-    "mongoose": "^3.6.20",
-    "nodemon": "^2.0.2",
-    "passport": "^0.4.1",
-    "passport-google-oauth20": "^2.0.0"
-  },
-  "scripts": {
-    "start": "node index.js"
-  }
+    "name": "node-api",
+    "main": "server.js",
+    "dependencies": {
+        "body-parser": "~1.0.1",
+        "bootstrap": "^4.4.1",
+        "ejs": "^3.0.1",
+        "express": "^4.0.0",
+        "mongoose": "^3.6.20",
+        "nodemon": "^2.0.2",
+        "passport": "^0.4.1",
+        "passport-google-oauth20": "^2.0.0"
+    },
+    "scripts": {
+        "start": "node index.js",
+        "test": "nyc --reporter=text mocha 'tests/unit/**/*.spec.js'"
+    },
+    "husky": {
+        "hooks": {
+            "pre-commit": "npm test",
+            "pre-push": "npm test"
+        }
+    },
+    "devDependencies": {
+        "chai": "^4.2.0",
+        "husky": "^4.2.5",
+        "mocha": "^7.1.1",
+        "nyc": "^15.0.1",
+        "sinon": "^9.0.2"
+    }
 }
